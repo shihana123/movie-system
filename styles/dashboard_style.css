@@ -1,0 +1,151 @@
+/* Reset default browser styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+ 
+  
+  /* Base body styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F5F7FA;
+    color: #4A4A4A;
+  }
+  
+  /* Dashboard layout styling */
+  .dashboard {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    width: 250px;
+    background-color: crimson;
+    color: #FFFFFF;
+    padding: 20px;
+    transition: width 0.3s;
+  }
+  
+  .sidebar .logo {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  /* Sidebar link hover effect */
+  .sidebar ul li a:hover {
+    color: #50E3C2;
+    padding-left: 10px;
+  }
+  
+  /* Main content area styling */
+  .main-content {
+    flex: 1;
+    padding: 40px;
+  }
+  
+  /* Header section styling */
+  header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 18px;
+    color:#4A4A4A;
+  }
+  
+  .search_bar
+  {
+    display: flex;
+  }
+  /* Primary button styling */
+.btn {
+    padding: 10px 20px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 5px;
+}
+section.widgets {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
+    gap: 20px; /* Add space between the items */
+    /* justify-content: center; Center align items horizontally */
+    padding: 20px;
+}
+
+/* Style each widget */
+.widget {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%; /* Default to full width */
+    max-width: 300px; /* Limit max width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.widget img {
+    width: 100%; /* Make the image responsive */
+    height: auto;
+    border-radius: 8px;
+}
+
+.widget h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Add hover effect for widgets */
+.widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .widgets, .charts {
+        flex-direction: column;
+    }
+  
+    .sidebar {
+        width: 60px;
+    }
+  
+    .sidebar .logo,
+    .sidebar ul li a {
+        display: none;
+    }
+  }
